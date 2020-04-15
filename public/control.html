@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Control</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-slider2.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-clockpicker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/easy-autocomplete.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+</head>
+
+
+<body>
+    <div>
+        <img src="img/cgr_inv.svg" id="topLogo" class="img-responsive" alt="Logo Compania General del Rally">
+    </div>
+
+
+    <div class="container-fluid">
+        <ul class="nav nav-tabs" id="navbar1">
+            <li class="active"><a data-toggle="tab" href="#screen1">P1</a></li>
+            <li><a data-toggle="tab" href="#screen2">P2</a></li>
+            <li><a data-toggle="tab" href="#screen3">P3</a></li>
+            <li><a data-toggle="tab" href="#screen4">P4</a></li>
+            <li><a data-toggle="tab" href="#progress">General</a></li>
+            <li><a data-toggle="tab" href="#settings">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a></li>
+
+        </ul>
+        <div class="tab-content">
+            <div id="screen1" class="tab-pane fade in active">
+                <h2>Piloto</h2>
+                <div class="input-group ui-widget">
+                    <span class="input-group-addon" id="basic-addon1"><strong>Nombre de Piloto</strong></span>
+                    <input type="text" class="form-control autocomplete" id="piloto1" placeholder="Piloto" aria-describedby="basic-addon1">
+                </div>
+                <button type="button" id="aceptarPilotos1" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                <h2>Hora de Inicio</h2>
+                <form>
+                    <div class="form-group row">
+                        <div class="col-xs-6">
+                            <div class="input-group clockpicker">
+                                <input type="text" id="inicio1" class="form-control" onfocus="this.blur()" value="12:34">
+                                <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 dayornight">
+                            <select id="dia1" class="form-control">
+                                  <option>Hoy</option>
+                                  <option>Mañana</option>
+                          </select>
+                        </div>
+                    </div>
+                </form>
+                <button type="button" id="aceptarInicio1" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                <h2>Duracion de Servicio</h2>
+                <div class="range-slider">
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="sliderval1" value=30 class="range-slider__value">
+                        <span class="input-group-addon" id="basic-addon2">minutos</span>
+                    </div>
+                    <input class="range-slider__range" id="sliderBar1" type="range" value="30" min="0" max="100" step="5">
+
+                </div>
+
+                <button type="button" id="aceptarSliderval1" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+
+
+            </div>
+
+            <div id="screen2" class="tab-pane fade">
+                <h2>Piloto</h2>
+                <div class="input-group ui-widget">
+                    <span class="input-group-addon" id="basic-addon1"><strong>Nombre de Piloto</strong></span>
+                    <input type="text" class="form-control autocomplete" id="piloto2" placeholder="Piloto" aria-describedby="basic-addon1">
+                </div>
+                <button type="button" id="aceptarPilotos2" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                <h2>Hora de Inicio</h2>
+                <form>
+                    <div class="form-group row">
+                        <div class="col-xs-6">
+                            <div class="input-group clockpicker">
+                                <input type="text" id="inicio2" class="form-control" onfocus="this.blur()" value="12:34">
+                                <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 dayornight">
+                            <select id="dia2" class="form-control">
+                                  <option>Hoy</option>
+                                  <option>Mañana</option>
+                          </select>
+                        </div>
+                    </div>
+                </form>
+                <button type="button" id="aceptarInicio2" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                <h2>Duracion de Servicio</h2>
+                <div class="range-slider">
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="sliderval2" value=30 class="range-slider__value">
+                        <span class="input-group-addon" id="basic-addon2">minutos</span>
+                    </div>
+                    <input class="range-slider__range" id="sliderBar1" type="range" value="30" min="0" max="100" step="5">
+
+                </div>
+
+                <button type="button" id="aceptarSliderval2" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+
+            </div>
+
+            <div id="screen3" class="tab-pane fade">
+                <h2>Piloto</h2>
+                <div class="input-group ui-widget">
+                    <span class="input-group-addon" id="basic-addon1"><strong>Nombre de Piloto</strong></span>
+                    <input type="text" class="form-control autocomplete" id="piloto3" placeholder="Piloto" aria-describedby="basic-addon1">
+                </div>
+                <button type="button" id="aceptarPilotos3" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                <h2>Hora de Inicio</h2>
+                <form>
+                    <div class="form-group row">
+                        <div class="col-xs-6">
+                            <div class="input-group clockpicker">
+                                <input type="text" id="inicio3" class="form-control" onfocus="this.blur()" value="12:34">
+                                <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 dayornight">
+                            <select id="dia3" class="form-control">
+                                  <option>Hoy</option>
+                                  <option>Mañana</option>
+                          </select>
+                        </div>
+                    </div>
+                </form>
+                <button type="button" id="aceptarInicio3" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                <h2>Duracion de Servicio</h2>
+                <div class="range-slider">
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="sliderval3" value=30 class="range-slider__value">
+                        <span class="input-group-addon" id="basic-addon2">minutos</span>
+                    </div>
+                    <input class="range-slider__range" id="sliderBar1" type="range" value="30" min="0" max="100" step="5">
+
+                </div>
+
+                <button type="button" id="aceptarSliderval3" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+
+            </div>
+
+            <div id="screen4" class="tab-pane fade">
+                <h2>Piloto</h2>
+                <div class="input-group ui-widget">
+                    <span class="input-group-addon" id="basic-addon1"><strong>Nombre de Piloto</strong></span>
+                    <input type="text" class="form-control autocomplete" id="piloto4" placeholder="Piloto" aria-describedby="basic-addon1">
+                </div>
+                <button type="button" id="aceptarPilotos4" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                <h2>Hora de Inicio</h2>
+                <form>
+                    <div class="form-group row">
+                        <div class="col-xs-6">
+                            <div class="input-group clockpicker">
+                                <input type="text" id="inicio4" class="form-control" onfocus="this.blur()" value="12:34">
+                                <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 dayornight">
+                            <select id="dia4" class="form-control">
+                                  <option>Hoy</option>
+                                  <option>Mañana</option>
+                          </select>
+                        </div>
+                    </div>
+                </form>
+                <button type="button" id="aceptarInicio4" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                <h2>Duracion de Servicio</h2>
+                <div class="range-slider">
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="sliderval4" value=30 class="range-slider__value">
+                        <span class="input-group-addon" id="basic-addon2">minutos</span>
+                    </div>
+                    <input class="range-slider__range" id="sliderBar1" type="range" value="30" min="0" max="100" step="5">
+
+                </div>
+
+                <button type="button" id="aceptarSliderval4" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+
+            </div>
+
+
+
+            <div id="progress" class="tab-pane fade">
+
+                <h2>Pantalla 1</h2>
+                <h4 id="sumPiloto1">Piloto: </h4>
+                <h4 id="sumDuracion1">Duracion de Servicio: </h4>
+                <h4 id="sumInicio1">Tiempo de Inicio: </h4>
+                <div class="progress">
+                    <div id="progressBar1" class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h2>Pantalla 2</h2>
+                <h4 id="sumPiloto2">Piloto: </h4>
+                <h4 id="sumDuracion2">Duracion de Servicio: </h4>
+                <h4 id="sumInicio2">Tiempo de Inicio: </h4>
+                <div class="progress">
+                    <div id="progressBar2" class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h2>Pantalla 3</h2>
+                <h4 id="sumPiloto3">Piloto: </h4>
+                <h4 id="sumDuracion3">Duracion de Servicio: </h4>
+                <h4 id="sumInicio3">Tiempo de Inicio: </h4>
+                <div class="progress">
+                    <div id="progressBar3" class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h2>Pantalla 4</h2>
+                <h4 id="sumPiloto4">Piloto: </h4>
+                <h4 id="sumDuracion4">Duracion de Servicio: </h4>
+                <h4 id="sumInicio4">Tiempo de Inicio: </h4>
+                <div class="progress">
+                    <div id="progressBar4" class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+            </div>
+
+
+            <div id="settings" class="tab-pane fade">
+
+                <h2>Ajustes Globales</h2>
+
+                <h4 class="small-title">Contenido:</h4>
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="allCrono" class="btn btn-primary">Crono <span class="glyphicon glyphicon-time" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="allPiloto" class="btn btn-primary">Piloto <span class="glyphicon glyphicon-object-align-vertical" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="allLogo" class="btn btn-primary">Logo CGR <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+
+                <h4 class="small-title">Modo:</h4>
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="toggleDay" class="btn btn-primary">Dia <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="toggleNight" class="btn btn-primary">Noche <span class="glyphicon glyphicon-lamp" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+                <h4 class="small-title">Barra de Progreso:</h4>
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="mostrarProg" class="btn btn-primary">Mostrar <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="esconderProg" class="btn btn-primary">Esconder <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+
+                <h4 class="small-title col-xs-6 littleleft">Despues de:</h4>
+                <h4 class="small-title super-inline col-xs-6">Cambiar a:</h4>
+
+                <form>
+                    <div class="form-group row">
+                        <div class="col-xs-6">
+                            <select id="changeAfterTimeLength" class="form-control">
+                            <option>1 minuto</option>
+                            <option>2 minutos</option>
+                            <option selected="selected">3 minutos</option>
+                            <option>5 minutos</option>
+                            <option>10 minutos</option>
+                            <option>Nunca</option>
+                          </select>
+                        </div>
+                        <div class="col-xs-6">
+                            <select id="changeAfterTimeOption" class="form-control">
+                            <option selected="selected">Logo y Piloto</option>
+                            <option>Logo Oficial CGR</option>
+                          </select>
+                        </div>
+                    </div>
+                </form>
+                <button type="button" id="aceptarChangeAfterTime" class="btn btn-primary btn-block">Aceptar <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                <h2>Lista de Pilotos</h2>
+                <div id="autofillPiloto" class="list-group">
+                </div>
+                <input type="text" class="form-control" id="nuevoPiloto" placeholder="Agregar Piloto" aria-describedby="basic-addon1">
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="agregarPiloto" class="btn btn-primary">Agregar <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="borrarPiloto" class="btn btn-primary">Eliminar <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+                <h2>Pantalla 1</h2>
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="toggleClock1" class="btn btn-primary">Crono <span class="glyphicon glyphicon-time" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="togglePiloto1" class="btn btn-primary">Piloto <span class="glyphicon glyphicon-object-align-vertical" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="toggleLogo1" class="btn btn-primary">Logo CGR <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+
+
+                <div class="btn-group btn-block get-rid-of-margin">
+                    <button type="button" data-toggle="modal" data-target="#basicModal1" class="btn btn-primary btn-block">Reset Pantalla <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                </div>
+
+
+                <div class="modal fade" id="basicModal1" tabindex="-1" role="dialog" aria-labelledby="basicModal1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="modalAlt">Está seguro que quiere reinicializar la Pantalla 1?</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="button" id="reset1" class="btn btn-default" data-dismiss="modal">Reset Pantalla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Pantalla 2</h2>
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="toggleClock2" class="btn btn-primary">Crono <span class="glyphicon glyphicon-time" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="togglePiloto2" class="btn btn-primary">Piloto <span class="glyphicon glyphicon-object-align-vertical" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="toggleLogo2" class="btn btn-primary">Logo CGR <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+
+
+                <div class="btn-group btn-block get-rid-of-margin">
+                    <button type="button" data-toggle="modal" data-target="#basicModal2" class="btn btn-primary btn-block">Reset Pantalla <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                </div>
+
+
+                <div class="modal fade" id="basicModal2" tabindex="-1" role="dialog" aria-labelledby="basicModal2" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="modalAlt">Está seguro que quiere reinicializar la Pantalla 2?</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="button" id="reset2" class="btn btn-default" data-dismiss="modal">Reset Pantalla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Pantalla 3</h2>
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="toggleClock3" class="btn btn-primary">Crono <span class="glyphicon glyphicon-time" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="togglePiloto3" class="btn btn-primary">Piloto <span class="glyphicon glyphicon-object-align-vertical" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="toggleLogo3" class="btn btn-primary">Logo CGR <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+
+
+                <div class="btn-group btn-block get-rid-of-margin">
+                    <button type="button" data-toggle="modal" data-target="#basicModal3" class="btn btn-primary btn-block">Reset Pantalla <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                </div>
+
+
+                <div class="modal fade" id="basicModal3" tabindex="-1" role="dialog" aria-labelledby="basicModal3" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="modalAlt">Está seguro que quiere reinicializar la Pantalla 3?</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="button" id="reset3" class="btn btn-default" data-dismiss="modal">Reset Pantalla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Pantalla 4</h2>
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="toggleClock4" class="btn btn-primary">Crono <span class="glyphicon glyphicon-time" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="togglePiloto4" class="btn btn-primary">Piloto <span class="glyphicon glyphicon-object-align-vertical" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="toggleLogo4" class="btn btn-primary">Logo CGR <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+
+
+                <div class="btn-group btn-block get-rid-of-margin">
+                    <button type="button" data-toggle="modal" data-target="#basicModal4" class="btn btn-primary btn-block">Reset Pantalla <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                </div>
+
+
+                <div class="modal fade" id="basicModal4" tabindex="-1" role="dialog" aria-labelledby="basicModal4" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="modalAlt">Está seguro que quiere reinicializar la Pantalla 4?</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="button" id="reset4" class="btn btn-default" data-dismiss="modal">Reset Pantalla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="js/bootstrap-clockpicker.min.js"></script>
+        <script src="js/bootstrap-slider.js"></script>
+        <script src="js/scriptsControl.js"></script>
+        <script src="js/jquery-ui.js"></script>
+
+
+</body>
+
+</html>

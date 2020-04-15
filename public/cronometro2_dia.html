@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CGR - Cronometro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    </head>
+    <body class="overflowPantalla">
+        <div id="clock2" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-4 mb-xs-48">
+                    <img id="startLogo" src="img/cgr_inv.svg" class="img-responsive" alt="Logo Compania General del Rally">                
+                </div> 
+                <div class="col-md-3 col-md-offset-5">
+                    <h1 id="actualTime">00:00:00</h1>
+                </div> 
+                <div class="col-md-3 col-md-offset-5">
+                    <h2 id="actualDate">00<span id='secondText'>/</span>00<span id='secondText'>/</span>0000</h2>
+                    <p>
+                        <span class="color-red">Fecha y Hora</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="midsection2" class="col-md-12 jumbotron mb-xs-0">
+                    <h1 id="overtime">+</h1>
+                    <h1 id="demo">00:00:00</h1>
+                    <p>
+                        <span class="color-red">Tiempo de Service</span>
+                    </p>
+                    <div class="progress progWidth center-block">
+                      <div id="mostrarProg2" class="progress-bar progress-bar-info active notext" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    
+                    <h1><span id="startTime2">00:00:00</span></h1>
+                    <p>
+                        <span class="color-red">Hora de Entrada</span>
+                    </p>
+                </div> 
+                <div class="col-md-8 col-md-offset-0 mt-xs-32 text-right">
+                    <h1 class="posPiloto" id="piloto2"><strong>Nombre Piloto <strong></h1>
+                </div>
+            </div>
+        </div>
+        <div id="saver2">
+            <img src="img/cgr_inv.svg" id="cgrsvg" class="img-responsive" alt="Logo Compania General del Rally">
+            <h1 class="saverPiloto" id="piloto22">Nombre Piloto </h1>
+        </div>
+        <div id="logo2" class="logo">
+            <img src="img/logo1.jpg" class="img-responsive" alt="Logo Compania General del Rally">
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="http:/socket.io/socket.io.js"></script>
+        <script src="js/scriptsPantallas2.js"></script>
+
+    </body>
+</html>
