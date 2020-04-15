@@ -1,5 +1,4 @@
 # CGRasp-crono-web-app
-
 Web application for mobile to set chronometer and timers for mechanics at service park.
 
 	--> node_modules (modules/libraries included)
